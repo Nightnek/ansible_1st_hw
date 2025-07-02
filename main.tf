@@ -37,7 +37,7 @@ resource "yandex_compute_instance" "clickhouse" {
 
   metadata = {
     serial-port-enable = 1
-    ssh-keys = "nightnek:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIATCa7b5AkkJuPKo9mYUERJ6dsW9l5np2qpirQFQ4y+9 nightnek@Nightneklaptop"
+    user-data = "${file("/home/nightnek/ansible/3rd lesson/08-ansible-03-yandex/cloud-config.yaml")}"
   }
 }
 
@@ -67,7 +67,7 @@ resource "yandex_compute_instance" "lighthouse" {
 
   metadata = {
     serial-port-enable = 1
-    ssh-keys = "nightnek:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIATCa7b5AkkJuPKo9mYUERJ6dsW9l5np2qpirQFQ4y+9 nightnek@Nightneklaptop"
+    user-data = "${file("/home/nightnek/ansible/3rd lesson/08-ansible-03-yandex/cloud-config.yaml")}"
   }
 }
 
@@ -97,7 +97,7 @@ resource "yandex_compute_instance" "vector" {
 
   metadata = {
     serial-port-enable = 1
-    ssh-keys = "nightnek:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIATCa7b5AkkJuPKo9mYUERJ6dsW9l5np2qpirQFQ4y+9 nightnek@Nightneklaptop"
+    user-data = "${file("/home/nightnek/ansible/3rd lesson/08-ansible-03-yandex/cloud-config.yaml")}"
   }
 }
 

@@ -48,6 +48,11 @@ variable "ssh_key_private" {
   
 }
 
+variable "ssh_key_pub" {
+  default = "~\\.ssh\\id_ed25519.pub"
+  
+}
+
 variable "vm_platform_id" {
   type        = string
   default     = "standard-v3"
@@ -62,7 +67,7 @@ variable "vm_preemptible" {
 
 variable "vm_os_family" {
   type        = string
-  default     = "centos-7-oslogin"
+  default     = "ubuntu-2204-lts-oslogin"
   description = "A name of the OS"
 }
 
